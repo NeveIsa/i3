@@ -1,0 +1,7 @@
+host: 18.219.4.146
+port: 1883
+user: sampad$isac$randtemp
+pass: sampad
+
+pub_topic: sampad/isac/random
+

@@ -1,0 +1,7 @@
+host: localhost
+port: 1883
+user: ""
+pass: ""
+
+pub_topic: sampad
+
