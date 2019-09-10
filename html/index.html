@@ -9,61 +9,9 @@
   <script src="js/js-yaml.min.js"></script>
  </head> 
 
+ <script src="js/config_downloader.js"></script>
 
 
-
-
-<body>
-
-<pre>
------------------------------------------------------
-	I3 PUBLISH SUBSCRIBE TOOL DOWNLOAD
------------------------------------------------------
-
-
-Step 1: 
-	git clone https://github.com/neveisa/i3 <br>
-
-Step 2: 
-	Download the file below into i3/tools/conf.d/config.yml
-
-</pre>
-
-	<pre id="config-display"></pre>
-	<button style="display:none" id="dlbutton" onclick="function _dl(){download(config_yaml,'config.yml','text/plain')};_dl()">download</button>
-</body>
-
-
-	<script>
-		function put_config(host,port,user,pass,pub_topic,sub_topic)
-		{
-			config={}
-			
-			config['host']=host?host:"";
-			config['port']=port?port:"";
-			
-			config['user']=user?user:"";
-			config['pass']=pass?pass:"";
-			
-			config['pub_topic']=pub_topic?pub_topic:"";
-			config['sub_topic']=sub_topic?sub_topic:"";
-			
-			window.config_yaml=jsyaml.safeDump(config)
-			
-			console.log("Dumping YAML =>")
-			console.log(config_yaml);
-
-			//display config
-			el=document.getElementById("config-display")
-			el.innerHTML="config.yml \n----------------\n\n"+config_yaml + "________________\n"
-
-			//show button
-			document.getElementById("dlbutton").style.display="block"
-
-		}
-
-		
-		put_config('localhost','1883','sam','pass','xyz','abc')
-			
-
-	</script>
+ <script>
+		download_config_file("host","1883","sam","pass","pub","sub");
+ </script>
