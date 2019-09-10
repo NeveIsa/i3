@@ -1,6 +1,5 @@
 default:
 	python3 -B tool_pub.py conf.d/local.yml
-	rm -rf __pycache__
 
 publish: default
 
@@ -9,6 +8,7 @@ config:
 
 clean:
 	rm -rf __pycache__
+	rm *.pyc
 
 install:
 	pip3 install -r req.txt

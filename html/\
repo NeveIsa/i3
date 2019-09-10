@@ -1,0 +1,44 @@
+ <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="js/download.js"></script>
+  <script src="js/js-yaml.min.js"></script>
+ </head> 
+
+
+
+
+
+<body>
+
+
+
+
+
+</body>
+
+
+	<script>
+		function download_config(host,port,user,pass,pub_topic,sub_topic)
+		{
+			config={}
+			
+			config['host']=host?host:"";
+			config['port']=port?port:"";
+			
+			config['user']=user?user:"";
+			config['pass']=pass?pass:"";
+			
+			config['pub_topic']=pub_topic?pub_topic:"";
+			config['sub_topic']=sub_topic?sub_topic:"";
+
+			console.log(jsyaml.safeDump(config));
+
+		}
+		
+		download_config('localhost','1883','sam','pass','xyz','abc')
+	</script>
