@@ -1,0 +1,7 @@
+host: 18.217.227.236
+port: 1883
+user: "sampad"
+pass: "ubxjpq"
+
+pub_topic: sampad
+
